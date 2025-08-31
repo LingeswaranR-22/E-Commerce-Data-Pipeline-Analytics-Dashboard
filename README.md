@@ -1,11 +1,11 @@
  # 🛒 E-Commerce Data Pipeline & Analytics Dashboard
 
-[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Database-blue)]()  
-[![dbt](https://img.shields.io/badge/dbt-Transformations-orange)]()  
-[![Power BI](https://img.shields.io/badge/Power%20BI-Dashboard-yellow)]()  
-[![ETL Pipeline](https://img.shields.io/badge/ETL%20Pipeline-Windows%20Task%20Scheduler-green)]()  
-[![Status](https://img.shields.io/badge/Project-Active-brightgreen)]()  
-[![License](https://img.shields.io/github/license/LingeswaranR-22/E-Commerce-Data-Pipeline-Analytics-Dashboard)]()
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Database-blue)  
+![dbt](https://img.shields.io/badge/dbt-Transformations-orange)  
+![Power BI](https://img.shields.io/badge/Power%20BI-Dashboard-yellow) 
+![ETL Pipeline](https://img.shields.io/badge/ETL%20Pipeline-Windows%20Task%20Scheduler-green)  
+![Status](https://img.shields.io/badge/Project-Active-brightgreen)  
+![License](https://img.shields.io/github/license/LingeswaranR-22/E-Commerce-Data-Pipeline-Analytics-Dashboard)
 
 End-to-end analytics pipeline for e-commerce order data using PostgreSQL, dbt, and Power BI. Includes source ingestion, transformation logic, automated testing, and dashboard-ready marts. Built for reproducibility, automation, and stakeholder impact.
 
