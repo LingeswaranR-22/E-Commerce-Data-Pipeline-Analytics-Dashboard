@@ -1,5 +1,4 @@
  # 🛒 E-Commerce Data Pipeline & Analytics Dashboard
-
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Database-blue)  
 ![dbt](https://img.shields.io/badge/dbt-Transformations-orange)  
 ![Power BI](https://img.shields.io/badge/Power%20BI-Dashboard-yellow) 
