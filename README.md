@@ -1,4 +1,5 @@
  # 🛒 E-Commerce Data Pipeline & Analytics Dashboard
+ 
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Database-blue)  
 ![dbt](https://img.shields.io/badge/dbt-Transformations-orange)  
 ![Power BI](https://img.shields.io/badge/Power%20BI-Dashboard-yellow) 
@@ -8,11 +9,31 @@
 
 End-to-end analytics pipeline for e-commerce order data using PostgreSQL, dbt, and Power BI. Includes source ingestion, transformation logic, automated testing, and dashboard-ready marts. Built for reproducibility, automation, and stakeholder impact.
 
+## 📚 Table of Contents
+
+- [Sample Visuals](#-sample-visuals)
+- [What You Get](#-what-you-get)
+- [Project Structure](#-project-structure)
+- [Business Use Cases](#-business-use-cases)
+- [Setup](#-setup)
+- [Run the Pipeline](#-run-the-pipeline)
+- [What It Uses](#-what-it-uses)
+- [Dashboard Spec](#-dashboard-spec-power-bi)
+- [Testing](#-testing)
+- [Notes](#-notes)
+- [Future Improvements](#-future-improvements)
+- [Author](#-author)
+- [.gitignore Highlights](#-.gitignore-highlights)
+- [License](#-license)
+  
 ---
 
 ## 📊 Sample Visuals
 
-> *Coming soon: Power BI screenshots showing product performance, daily sales, and customer lifetime value.*
+![Customer Overview Dashboard](<img width="1162" height="652" alt="Customer Overview" src="https://github.com/user-attachments/assets/02ad2d60-e40c-4fed-b5e1-52a758a4b485" />)
+![Product Performance Dashboard](<img width="1157" height="650" alt="Product Performance" src="https://github.com/user-attachments/assets/685e117f-591c-42de-b635-540d8d0c6969" />)
+![Revenue Trends Dashboard](<img width="1156" height="651" alt="Revenue Trends" src="https://github.com/user-attachments/assets/33eaa73a-e30c-4862-accc-6d051c80f6c2" />)
+![KPI Dashboard](<img width="1165" height="647" alt="KPI" src="https://github.com/user-attachments/assets/39b6931c-ecbb-4a80-ae04-739f70a6df5b" />)
 
 ---
 
@@ -27,7 +48,21 @@ End-to-end analytics pipeline for e-commerce order data using PostgreSQL, dbt, a
 ---
 
 ## 🧱 Project Structure
-
+```
+dbt_project/
+├── models/ 
+│ └── ecommerce_dashboard_project/
+│  ├── staging/
+│  │ ├── stg_orders.sql
+│  │ └── schema.yml
+│  └── marts/
+│   └── core/
+│    ├── product_performance.sql
+│    ├── sales_summary.sql │ 
+│     └── customer_lifetime_value.sql
+├── dbt_project.yml
+└── README.md**
+```
 ---
 
 ## 💼 Business Use Cases
@@ -70,23 +105,31 @@ End-to-end analytics pipeline for e-commerce order data using PostgreSQL, dbt, a
       schema: public
       threads: 1
 
+ ---
+
 ## ▶️ Run the Pipeline
 
 # Activate environment
-airflow_env\Scripts\activate
+
+     
+     airflow_env\Scripts\activate
 
 # Navigate to project
-cd dbt_project
+ 
+     cd dbt_project
 
 # Build models
-dbt run --full-refresh
+
+    dbt run --full-refresh
 
 # Run tests
-dbt test
+
+    dbt test
 
 ✅ Models will be materialized as views in your Postgres database
 ✅ Tests will validate key fields for nulls and uniqueness
 
+---
 
 ## 🔍 What It Uses
 
@@ -105,6 +148,7 @@ Product performance
 Sales summary
 Customer lifetime value
 
+---
 
 ## 📊 Dashboard Spec (Power BI)
 
@@ -116,6 +160,7 @@ Customer lifetime value
 
 👥 CLV → scatter plot of customer value vs frequency
 
+---
 
 ## 🧪 Testing
 
@@ -125,6 +170,8 @@ not_null and unique on order_id, customer_id, etc.
 
 Source-level and model-level validations
 
+---
+
 ## 🧠 Notes
 
 This project uses only the orders table for now
@@ -133,12 +180,30 @@ Future expansion: add products, customers, and order_items tables
 
 dbt folder structure aligned with best practices for staging and marts.
 
+---
+
+## 🔮 Future Improvements
+
+- Add `products`, `customers`, and `order_items` tables
+- Integrate dbt snapshots for historical tracking
+- Deploy dashboard to Power BI Service with auto-refresh
+- Add relationship tests between staging and marts
+
+---
 
 ## 👨‍💻 Author
 
 **Lingeswaran R** 
+
 Detail-oriented data engineer focused on building reproducible, automated analytics pipelines.
 
+---
+
+## 📂 .gitignore Highlights
+
+     pycache/ *.pyc dbt_packages/ target/ logs/ .env
+
+---
 
 ## 📄 License
 
