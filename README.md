@@ -1,11 +1,12 @@
  # 🛒 E-Commerce Data Pipeline & Analytics Dashboard
  
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Database-blue)  
-![dbt](https://img.shields.io/badge/dbt-Transformations-orange)  
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Database-blue) 
+![dbt](https://img.shields.io/badge/dbt-Transformations-orange) 
 ![Power BI](https://img.shields.io/badge/Power%20BI-Dashboard-yellow) 
-![ETL Pipeline](https://img.shields.io/badge/ETL%20Pipeline-Windows%20Task%20Scheduler-green)  
-![Status](https://img.shields.io/badge/Project-Active-brightgreen)  
-![License](https://img.shields.io/github/license/LingeswaranR-22/E-Commerce-Data-Pipeline-Analytics-Dashboard)
+![ETL Pipeline](https://img.shields.io/badge/ETL%20Pipeline-Windows%20Task%20Scheduler-green) 
+![Status](https://img.shields.io/badge/Project-Active-brightgreen) 
+![License](https://img.shields.io/badge/License-MIT-brightgreen)
+
 
 End-to-end analytics pipeline for e-commerce order data using PostgreSQL, dbt, and Power BI. Includes source ingestion, transformation logic, automated testing, and dashboard-ready marts. Built for reproducibility, automation, and stakeholder impact.
 
@@ -30,10 +31,17 @@ End-to-end analytics pipeline for e-commerce order data using PostgreSQL, dbt, a
 
 ## 📊 Sample Visuals
 
-![Customer Overview Dashboard](<img width="1162" height="652" alt="Customer Overview" src="https://github.com/user-attachments/assets/02ad2d60-e40c-4fed-b5e1-52a758a4b485" />)
-![Product Performance Dashboard](<img width="1157" height="650" alt="Product Performance" src="https://github.com/user-attachments/assets/685e117f-591c-42de-b635-540d8d0c6969" />)
-![Revenue Trends Dashboard](<img width="1156" height="651" alt="Revenue Trends" src="https://github.com/user-attachments/assets/33eaa73a-e30c-4862-accc-6d051c80f6c2" />)
-![KPI Dashboard](<img width="1165" height="647" alt="KPI" src="https://github.com/user-attachments/assets/39b6931c-ecbb-4a80-ae04-739f70a6df5b" />)
+### Customer Overview
+![Customer Overview Dashboard](https://github.com/user-attachments/assets/02ad2d60-e40c-4fed-b5e1-52a758a4b485)
+
+### Product Performance
+![Product Performance Dashboard](https://github.com/user-attachments/assets/685e117f-591c-42de-b635-540d8d0c6969)
+
+### Revenue Trends
+![Revenue Trends Dashboard](https://github.com/user-attachments/assets/33eaa73a-e30c-4862-accc-6d051c80f6c2)
+
+### KPI Dashboard
+![KPI Dashboard](https://github.com/user-attachments/assets/39b6931c-ecbb-4a80-ae04-739f70a6df5b)
 
 ---
 
@@ -83,12 +91,13 @@ dbt_project/
    cd dbt_project
 
 2. **Set up Python environment**
-
+    ```bash
    python -m venv airflow_env
    airflow_env\Scripts\activate
    pip install dbt-postgres
 
 3. **Configure dbt profile**
+   
    Create or edit C:\Users\ADMIN\.dbt\profiles.yml:
 
     ```bash
@@ -111,7 +120,6 @@ dbt_project/
 
 # Activate environment
 
-     
      airflow_env\Scripts\activate
 
 # Navigate to project
@@ -127,6 +135,7 @@ dbt_project/
     dbt test
 
 ✅ Models will be materialized as views in your Postgres database
+
 ✅ Tests will validate key fields for nulls and uniqueness
 
 ---
@@ -135,18 +144,18 @@ dbt_project/
 
 **orders table with:**
 
-order_id, customer_id, product_id, order_date, total_amount
+- order_id, customer_id, product_id, order_date, total_amount
 
 **dbt transformations to:**
 
-Clean and stage raw data
-Aggregate metrics for dashboards
+- Clean and stage raw data
+- Aggregate metrics for dashboards
 
 **Power BI dashboard (external) for:**
 
-Product performance
-Sales summary
-Customer lifetime value
+- Product performance
+- Sales summary
+- Customer lifetime value
 
 ---
 
@@ -166,19 +175,19 @@ Customer lifetime value
 
 **12+ dbt tests:**
 
-not_null and unique on order_id, customer_id, etc.
+- not_null and unique on order_id, customer_id, etc.
 
-Source-level and model-level validations
+- Source-level and model-level validations.
 
 ---
 
 ## 🧠 Notes
 
-This project uses only the orders table for now
+- This project uses only the orders table for now.
 
-Future expansion: add products, customers, and order_items tables
+- Future expansion: add products, customers, and order_items tables.
 
-dbt folder structure aligned with best practices for staging and marts.
+- dbt folder structure aligned with best practices for staging and marts.
 
 ---
 
@@ -201,13 +210,17 @@ Detail-oriented data engineer focused on building reproducible, automated analyt
 
 ## 📂 .gitignore Highlights
 
-     pycache/ *.pyc dbt_packages/ target/ logs/ .env
+- **Python caches:** `__pycache__/`, `*.pyc`  
+- **dbt artifacts:** `dbt_packages/`, `target/`  
+- **Logs:** `logs/`  
+- **Environment variables:** `.env`
 
 ---
 
-## 📄 License
+## License
 
-MIT License — free to use, modify, and share.
+This project is licensed under the MIT License.  
+See the [LICENSE](LICENSE) file for more details.  
 
 
 
