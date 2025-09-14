@@ -217,7 +217,7 @@ Detail-oriented data engineer focused on building reproducible, automated analyt
 
 ---
 
-## License
+## 📜 License
 
 This project is licensed under the MIT License.  
 See the [LICENSE](LICENSE) file for more details.  
