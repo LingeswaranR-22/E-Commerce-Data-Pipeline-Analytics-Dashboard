@@ -1,0 +1,22 @@
+Raw E-commerce Data (CSV) 
+        │
+        ▼
+Data Ingestion → PostgreSQL (staging schema)
+        │
+        ▼
+Staging Models (dbt: clean & standardize)
+        │
+        ▼
+Transformations & Marts (dbt: product performance, sales summary, CLV)
+        │
+        ▼
+Testing & Validation (dbt tests)
+        │
+        ▼
+PostgreSQL (marts schema / warehouse)
+        │
+        ▼
+Power BI Dashboard (visual insights)
+        │
+        ▼
+Automation (Windows Task Scheduler for daily refresh)
